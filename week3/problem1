@@ -1,0 +1,17 @@
+def f(x):
+    import math
+    return 10*math.e**(math.log(0.5)/5.27 * x)
+
+def radiationExposure(start, stop, step):
+    result = 0
+    buf = start
+    while buf < stop:
+        result+= f(buf)*step
+        buf+=step
+    return result
+
+start = 0
+stop = 5
+step = 1
+
+print radiationExposure(start,stop,step)
